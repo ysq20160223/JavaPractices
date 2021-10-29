@@ -1,0 +1,4 @@
+JRE (JAVA Runtime Environment)
+	JAVA Virtual Machine
+
+JDK (JAVA Development Kit)
