@@ -16,9 +16,21 @@ import utils.XLog;
 public class DynamicProxy {
 
 	public static void main(String[] args) throws Exception {
-		testAgent();
+		// testAgent();
 
-		// generateProxyClass();
+		generateProxyClass();
+
+		generateAbstractProxyClass();
+	}
+
+	@SuppressWarnings("resource")
+	private static void generateAbstractProxyClass() throws Exception {
+		byte[] proxyClassFile = ProxyGenerator.generateProxyClass("ProxyAbstractTemp",
+				new Class[] { Api.class, AbstractProxy.class }, Modifier.FINAL | Modifier.PUBLIC);
+
+		new RandomAccessFile(new File("ProxyAbstractTemp.class"), "rw").write(proxyClassFile);
+
+		XLog.init().debug("generateAbstractProxyClass over");
 	}
 
 	@SuppressWarnings("resource")
@@ -28,7 +40,7 @@ public class DynamicProxy {
 
 		new RandomAccessFile(new File("ProxyTemp.class"), "rw").write(proxyClassFile);
 
-		XLog.init().debug("over");
+		XLog.init().debug("generateProxyClass over");
 	}
 
 	private static void testAgent() throws Exception {
