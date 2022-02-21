@@ -10,8 +10,10 @@ import utils.XLog;
  */
 public class Day1807 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 
+		//
+		//
 		// FileWriter(String fileName)
 		// 根据给定的文件名构造一个 FileWriter 对象。
 

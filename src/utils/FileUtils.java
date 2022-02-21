@@ -49,13 +49,12 @@ public class FileUtils {
 		FileReader reader = null;
 		FileWriter writer = null;
 
-		reader = new FileReader(srcPath);
-
 		File file = new java.io.File(destPath);
 		if (!file.exists()) {
 			file.getParentFile().mkdirs();
 			file.createNewFile();
 		}
+		reader = new FileReader(srcPath);
 		writer = new FileWriter(file);
 
 		char[] buf = new char[8];

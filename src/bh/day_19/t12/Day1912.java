@@ -12,8 +12,10 @@ import java.io.FileWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-import utils.XLog;
+import javax.swing.filechooser.FileSystemView;
+
 import utils.ThreadUtil;
+import utils.XLog;
 
 public class Day1912 {
 
@@ -59,6 +61,10 @@ public class Day1912 {
 	 * 用带有缓冲的字节流复制图片，效率最高
 	 */
 	private static void buffered_Input_Output_Stream() throws Exception {
+
+		FileSystemView fsv = FileSystemView.getFileSystemView();
+		File com = fsv.getHomeDirectory();
+
 		BufferedInputStream bis = new BufferedInputStream(new FileInputStream(src));
 		BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(path + "03_normal.temp.png"));
 
