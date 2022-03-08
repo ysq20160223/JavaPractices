@@ -11,7 +11,7 @@ import javax.swing.filechooser.FileSystemView;
 
 import utils.XLog;
 
-public class Copy {
+public class CopyFile {
 
 	public static void main(String[] args) throws Exception {
 
@@ -49,7 +49,7 @@ public class Copy {
 		}
 
 		String prefix = srcFileNameSplit[0]; // 目标文件名
-		String suffix = srcFileNameSplit[1]; // 目标文件后缀名 suffix
+		String suffix = srcFileNameSplit[1]; // 目标文件后缀
 
 		File destDir = new File(srcFile.getParentFile() + "\\" + prefix);
 		if (!destDir.exists()) {
