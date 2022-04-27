@@ -20,7 +20,7 @@ public class CopyFile {
 
 		// copyImg(new File(homeFile + "\\Img\\BitCoin.png"), 5000);
 		// copyImg(new File(homeFile + "\\Img\\nzha.png"), 5000);
-		copyImg(new File(homeFile + "\\Img\\Colorful.png"), 5000);
+		copyImg(new File(homeFile + "\\Img\\Colorful.png"), 4000);
 		// copyImg(new File(homeFile + "\\Img\\Dolphin.png"), 5000);
 	}
 

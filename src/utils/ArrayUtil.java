@@ -73,7 +73,7 @@ public class ArrayUtil {
 		for (int i = 0; i < array.length - 1; i++) {
 			for (int j = i + 1; j < array.length; j++) {
 				if (array[i] > array[j]) {
-					changeValue(i, j, array);
+					swap(i, j, array);
 				}
 			}
 		}
@@ -86,7 +86,7 @@ public class ArrayUtil {
 		for (int i = 0; i < array.length - 1; i++) {
 			for (int j = i + 1; j < array.length; j++) {
 				if (array[i] < array[j]) {
-					changeValue(i, j, array);
+					swap(i, j, array);
 				}
 			}
 		}
@@ -95,7 +95,7 @@ public class ArrayUtil {
 	/**
 	 * 交换数组的值
 	 */
-	public static void changeValue(int a, int b, int array[]) {
+	public static void swap(int a, int b, int array[]) {
 		int temp = array[a];
 		array[a] = array[b];
 		array[b] = temp;

@@ -2,6 +2,8 @@ package y_2022.copy;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import utils.XDate;
 import utils.XLog;
@@ -14,6 +16,8 @@ public class CopyPath {
 			generatedDir.mkdirs();
 		}
 
+		List<String> dirList = new ArrayList<>();
+		List<String> fileList = new ArrayList<>();
 		File rootFile = new File("E:\\");
 		File[] files = rootFile.listFiles();
 		if (null != files && files.length > 0) {
@@ -25,6 +29,7 @@ public class CopyPath {
 					if (!dir.exists()) {
 						dir.mkdirs();
 					}
+					dirList.add("\"" + fileName + "\"");
 				} else {
 					File f = new File(generatedDir + "\\" + fileName);
 					if (!f.exists()) {
@@ -33,9 +38,12 @@ public class CopyPath {
 						out.flush();
 						out.close();
 					}
+					fileList.add("\"" + fileName + "\"");
 				}
 				XLog.init().debug(files[i]);
 			}
+			XLog.init().debug(dirList);
+			XLog.init().debug(fileList);
 		}
 	}
 
