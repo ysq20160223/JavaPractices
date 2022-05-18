@@ -10,6 +10,7 @@ public class StackFunc {
 		stack.push(1);
 		stack.push(9);
 		stack.push(3);
+		stack.push(17);
 		for (int i = 0; !stack.isEmpty(); i++) {
 			XLog.init().debug("i: " + i + "; " + stack.pop());
 		}
@@ -30,7 +31,11 @@ class Stack {
 	}
 
 	public void push(int i) {
-		array[++top] = i;
+		if (!isFull()) {
+			array[++top] = i;
+		} else {
+			XLog.init().warn("isFull already; push: " + i);
+		}
 	}
 
 	public int pop() {
