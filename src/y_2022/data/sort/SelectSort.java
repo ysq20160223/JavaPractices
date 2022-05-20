@@ -6,6 +6,8 @@ import utils.XLog;
 /*
   	比较次数: N * (N - 1) / 2 约等于 O(N ^ 2)
  	交换次数: O(N)
+ 	
+ 	比较后存储下标, 一次for循环之后交换
  */
 public class SelectSort {
 

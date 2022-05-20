@@ -3,6 +3,11 @@ package y_2022.data.sort;
 import utils.ArrayUtil;
 import utils.XLog;
 
+/*
+ 	场景: 针对部分有序
+ 	
+ 	
+ */
 public class InsertSort {
 
 	public static void main(String[] args) {

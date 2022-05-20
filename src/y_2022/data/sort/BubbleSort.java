@@ -6,6 +6,8 @@ import utils.XLog;
 /*
  	比较次数: N * (N - 1) / 2 约等于 O(N ^ 2)
  	交换次数: N * (N - 1) / 2 约等于 O(N ^ 2)
+ 	
+ 	比较后立即交换
  */
 public class BubbleSort {
 
