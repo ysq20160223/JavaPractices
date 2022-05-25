@@ -6,7 +6,7 @@ import utils.XLog;
 /*
  	场景: 针对部分有序
  	
- 	
+ 	比较后立即交换, 在合适的位置插入数据
  */
 public class InsertSort {
 
